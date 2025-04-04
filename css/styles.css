@@ -1,0 +1,292 @@
+/* Global Styles */
+body {
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout */
+.wrapper {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 56px); /* Subtract navbar height */
+}
+
+/* Navbar */
+.navbar {
+  height: 56px; /* Ensure consistent height */
+  display: flex;
+  align-items: center;
+  background-color: #0a2558; /* Match sidebar color */
+  box-shadow: none; /* Remove any shadow */
+  border: none; /* Ensure no border is applied */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+/* Navbar Left */
+.navbar-left {
+  width: 15%;
+  height: 100%; /* Match navbar height */
+  background-color: #0a2558; /* Same color as the sidebar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; /* Ensure no border is applied */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add bottom shadow */
+}
+
+.navbar-left span {
+  color: #fff; /* Ensure LMS text is white */
+}
+
+/* Navbar Right */
+.navbar-right {
+  width: 85%;
+  height: 100%; /* Match navbar height */
+  background-color: #ffffff; /* White background */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative; /* Allow positioning of the menu button */
+  padding: 0 1rem; /* Add padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add bottom shadow */
+  border: none; /* Ensure no border is applied */
+  margin: 0; /* Remove any default margin */
+  overflow: visible; /* Ensure child elements are visible */
+  position: relative; /* Allow proper positioning of child elements */
+}
+
+/* Remove underlines from all navbar links */
+.navbar a {
+  text-decoration: none; /* Global rule to prevent underlines in navbar */
+}
+
+/* Remove any default styles from Bootstrap */
+.navbar a,
+.navbar button {
+  border: none; /* Ensure no borders are applied */
+  box-shadow: none; /* Remove any shadow */
+  outline: none; /* Remove focus outline */
+}
+
+.navbar-brand i {
+  font-size: 2rem !important;
+  color: #fff;
+}
+
+.navbar-brand:hover i {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Navbar Toggler (Menu Button) */
+.navbar-toggler {
+  z-index: 1050; /* Ensure it appears in front of all other elements */
+  padding: 0.5rem 1rem;
+  background: transparent; /* Remove any background color */
+  border: none; /* Remove border */
+  position: relative; /* Ensure proper positioning */
+}
+
+.navbar-toggler i {
+  font-size: 2rem; /* Make the menu button larger */
+  color: #212529; /* Set the color to dark gray */
+}
+
+.navbar-toggler:hover i {
+  color: #000000; /* Darker gray on hover */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 15%;
+  background-color: #0a2558;
+  position: fixed;
+  left: 0;
+  top: 56px;
+  bottom: 0;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  color: #fff;
+}
+
+/* Profile Section */
+/* .profile-section {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+} */
+
+.profile-section {
+  background-color: #0a2558; /* Match sidebar color */
+  border-radius: 0.5rem; /* Add rounded corners */
+  padding: 1rem; /* Add padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  /* margin: 1rem; Add spacing around the profile section */
+}
+
+.profile-section .d-flex {
+  padding: 0 !important;
+}
+
+.profile-section img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Online Status */
+.online-status {
+  width: 12px;
+  height: 12px;
+  background-color: #28a745;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Sidebar Section Headers */
+.nav-header {
+  padding: 1rem 1rem 0.5rem; /* Reduced left padding */
+}
+
+.nav-header-text {
+  color: rgba(255, 255, 255, 0.5); /* Lighter text for headers */
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* Adjust spacing after headers */
+.nav-header + .nav-item .nav-link {
+  padding-top: 0.5rem;
+}
+
+/* Main Content */
+.main-content {
+  width: 85%;
+  margin-left: 15%;
+  padding: 20px;
+  margin-top: 56px;
+  min-height: calc(100vh - 56px);
+  background-color: #f8f9fa;
+}
+
+/* Sidebar Navigation */
+.nav-pills {
+  padding: 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Top shadow */
+}
+
+.nav-pills .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link i {
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Hover effects */
+.nav-pills .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.nav-pills .nav-link:hover i {
+  color: #ffffff;
+}
+
+/* Active state */
+.nav-pills .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.nav-pills .nav-link.active i {
+  color: #ffffff;
+}
+
+/* Remove any default margins from nav */
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjust spacing for sidebar items */
+.nav-item {
+  padding-left: 0.5rem;
+}
+
+/* Dropdown styles */
+.nav-item .dropdown-toggle {
+  cursor: pointer;
+}
+
+.nav-item .collapse .nav-link {
+  padding-left: 1.5rem; /* Indent dropdown items */
+  font-size: 0.9rem; /* Slightly smaller font for dropdown items */
+}
+
+.nav-item .collapse .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-1px);
+}
+
+/* Additional Utility Classes */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Dashboard Cards */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon-shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+}
